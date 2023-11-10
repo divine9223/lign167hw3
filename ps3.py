@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[72]:
+
+#Group Submission: Carlos Monterosa and Divinity Gines
+#Individual Contributions ps3.py and gpt solutions 1 and 2 were worked on together by both Divinity
+#and Carlos by producing and debugging the code.
 
 
 import numpy as np
@@ -135,10 +138,6 @@ def d_loss_d_W1(variable_dict,W2,y_observed):
         d_W1[j, :] = d_loss[0][j] * h0
     return d_W1
 
-    
-    
-    
-
 
 #PROBLEM 7
 def d_loss_d_h0(variable_dict,W1,W2,y_observed):
@@ -147,9 +146,6 @@ def d_loss_d_h0(variable_dict,W1,W2,y_observed):
         d_loss = d_loss_d_r1(variable_dict, W2, y_observed)
         d_loss = np.dot(d_loss, W1)
     return d_loss
-        
-    
-
 
 
 #PROBLEM 8
@@ -238,52 +234,3 @@ def torch_compute_gradient(x, y_observed, model):
     
     # Return the model with updated gradients
     return model
-
-
-
-
-
-# In[5]:
-
-
-# variable_dict = mlp(x,W0,W1,W2)
-
-
-# In[77]:
-
-
-# x = 10
-# W0 = np.array([1,2,3])
-# W1 = np.array([[3,4,5],[-5,4,3],[3,4,1]])
-# W2 = np.array([1,3,-3])
-# y_observed = 9
-
-
-# In[ ]:
-
-
-# custom_weights = {
-#     'fc1_weight': torch.tensor([[1], [2], [3]], dtype=torch.float),
-#     'fc2_weight': torch.tensor([[3,4,5],[-5,4,3],[3,4,1]], dtype=torch.float),  # Example of random weights for the second layer
-#     'fc3_weight': torch.tensor([[1,3,-3]], dtype=torch.float),
-# }
-
-# # Instantiate the model with the custom weights
-# model = TorchMLP(custom_weights=custom_weights)
-
-# # Print the model's state_dict
-# print("Model's state_dict:")
-# for param_tensor in model.state_dict():
-#     print(param_tensor, "\t", model.state_dict()[param_tensor])
-
-# # Test the model with a dummy input
-# dummy_input = torch.tensor([[10.0]])  # Single feature input
-# output = model(dummy_input)
-# print("Output:", output)
-
-
-# In[ ]:
-
-
-
-

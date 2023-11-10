@@ -2,6 +2,7 @@ import numpy as np
 import torch
 from torch import nn
 
+#GPT Link: https://chat.openai.com/share/dbd4e556-61c3-4390-9534-f5ab471f4362
 
 ######################################## BEGIN STARTER CODE ########################################
 
@@ -155,7 +156,7 @@ def d_loss_d_W1(variable_dict,W2,y_observed):
     gradient_W1 = np.outer(d_loss_d_r1, h0)
     
     return gradient_W1
-
+# the overshadowing variable name in line 149 can cause errors in the code
 
 #PROBLEM 7
 def d_loss_d_h0(variable_dict,W1,W2,y_observed):
@@ -175,7 +176,7 @@ def d_loss_d_h0(variable_dict,W1,W2,y_observed):
     d_loss_d_h0 = np.dot(W1.T, d_loss_d_r1) * relu_derivs
     
     return d_loss_d_h0
-
+#same as problem 6 in line 164, overshadowing variable name
 
 
 #PROBLEM 8
@@ -197,6 +198,7 @@ def d_loss_d_r0(variable_dict,W1,W2,y_observed):
     d_loss_d_r0 = np.dot(d_loss_d_r1, W1) * relu_derivs
     
     return d_loss_d_r0
+#needs to use the transpose in order to properly use the np.dot function
 
 #same as solution 1
 #PROBLEM 9
