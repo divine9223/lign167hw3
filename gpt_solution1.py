@@ -192,6 +192,7 @@ def d_loss_d_r0(variable_dict,W1,W2,y_observed):
     d_loss_d_r0 = d_loss_d_h0 * relu_derivs
     
     return d_loss_d_r0
+#Same error in Problem 7, and when d_loss_d_r0 = d_loss_d_r0(variable_dict, W1, W2, y_observed) line 138 an error occurs
 
 
 #PROBLEM 9
