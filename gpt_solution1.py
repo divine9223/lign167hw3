@@ -2,6 +2,7 @@ import numpy as np
 import torch
 from torch import nn
 
+#GPT Link: https://chat.openai.com/share/dbd4e556-61c3-4390-9534-f5ab471f4362
 
 ######################################## BEGIN STARTER CODE ########################################
 
@@ -159,6 +160,7 @@ def d_loss_d_W1(variable_dict,W2,y_observed):
         gradient_W1[j, :] = d_loss_d_r1[j] * h0
     
     return gradient_W1
+#error in Problem 6 doesn't output code index error in line 160, needed the [0] before[j]
 
 
 #PROBLEM 7
