@@ -173,6 +173,7 @@ def d_loss_d_h0(variable_dict,W1,W2,y_observed):
     d_loss_d_h0 = np.dot(W1.T, d_loss_d_r1)
     
     return d_loss_d_h0
+#error in Problem 7 as it used W1.T which is transpose
 
 
 
